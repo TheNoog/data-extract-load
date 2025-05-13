@@ -1,0 +1,61 @@
+﻿@page "/"
+
+<h1>Data Transfer App</h1>
+
+<p>Enter your connection details below:</p>
+
+<div class="form-group">
+    <label for="mssqlServer">MSSQL Server:</label>
+    <input type="text" class="form-control" id="mssqlServer" @bind="mssqlServer">
+</div>
+<div class="form-group">
+    <label for="mssqlDatabase">MSSQL Database:</label>
+    <input type="text" class="form-control" id="mssqlDatabase" @bind="mssqlDatabase">
+</div>
+<div class="form-group">
+    <label for="mssqlUser">MSSQL User ID:</label>
+    <input type="text" class="form-control" id="mssqlUser" @bind="mssqlUser">
+</div>
+<div class="form-group">
+    <label for="mssqlPassword">MSSQL Password:</label>
+    <input type="password" class="form-control" id="mssqlPassword" @bind="mssqlPassword">
+</div>
+<div class="form-group">
+    <label for="azureConnectionString">Azure Storage Connection String:</label>
+    <input type="text" class="form-control" id="azureConnectionString" @bind="azureConnectionString">
+</div>
+
+<button class="btn btn-primary" @onclick="StartTransfer">Start Data Transfer</button>
+
+<div class="status-section mt-4">
+    <h2>Status</h2>
+    <p>@statusMessage</p>
+</div>
+
+@code {
+    private string mssqlServer;
+    private string mssqlDatabase;
+    private string mssqlUser;
+    private string mssqlPassword;
+    private string azureConnectionString;
+    private string statusMessage = "Idle";
+
+    private void StartTransfer()
+    {
+        // In a real application, you would use the entered details to connect to
+        // MSSQL and Azure Storage and perform the data transfer.
+        // For this example, we'll just update the status message.
+
+        statusMessage = "Connecting to databases...";
+
+        // Simulate some work
+        System.Threading.Thread.Sleep(2000);
+
+        statusMessage = "Transferring data...";
+
+        // Simulate some more work
+        System.Threading.Thread.Sleep(3000);
+
+        statusMessage = "Data transfer complete!";
+    }
+}
