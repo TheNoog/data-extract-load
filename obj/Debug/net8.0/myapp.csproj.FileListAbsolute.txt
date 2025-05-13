@@ -27,3 +27,4 @@
 /home/user/data-extact-load/obj/Debug/net8.0/myapp.pdb
 /home/user/data-extact-load/obj/Debug/net8.0/myapp.genruntimeconfig.cache
 /home/user/data-extact-load/obj/Debug/net8.0/ref/myapp.dll
+/home/user/data-extact-load/obj/Debug/net8.0/myapp.sourcelink.json

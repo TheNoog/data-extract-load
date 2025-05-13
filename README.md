@@ -22,3 +22,7 @@ Before running the app, you need to configure the connection details for your MS
 
 1.  Ensure you have provided the necessary configuration details as described in the "Configuration" section.
 2.  Run the application using the standard .NET command: `dotnet run`
+
+<br />
+
+![App homepage](app-home.png)
